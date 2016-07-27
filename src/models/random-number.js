@@ -7,7 +7,6 @@ class AnswerGenerator {
       const randomNum = Math.random()*digit.length;
       numbers.push(digit.splice(randomNum, 1)[0]);
     }
-    console.log(numbers);
     return numbers;
   }
 }
