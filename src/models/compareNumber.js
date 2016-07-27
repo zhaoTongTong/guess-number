@@ -5,10 +5,10 @@ class CompareNumber {
     const answers = answer.split('');
 
     const rightDigitCount = inputs.filter(c => answers.includes(c)).length;
-    const x = inputs.filter(c => answers.indexOf(c) === inputs.indexOf(c)).length;
-    const y = rightDigitCount - x;
+    const countOfA = inputs.filter(c => answers.indexOf(c) === inputs.indexOf(c)).length;
+    const countOfB = rightDigitCount - countOfA;
 
-    return `${x}A${y}B`;
+    return `${countOfA}A${countOfB}B`;
   }
 }
 

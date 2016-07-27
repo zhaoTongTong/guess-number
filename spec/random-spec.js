@@ -10,6 +10,6 @@ describe('random number', () => {
 
     const answer = random.randomNumber();
     expect(answer.length).toBe(4);
-    expect(answer.every(isUnique)).toBeTruthy();
+    expect(answer.split().every(isUnique)).toBeTruthy();
   });
 });
