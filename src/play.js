@@ -10,14 +10,14 @@ function play() {
   }
 
   console.log("welcome!\n");
-  const defaultNum = AnswerGenerator.randomNumber();
+  const defaultNum = AnswerGenerator.randomNumber().join('');
   for(let times = 6; times > 0; times--) {
     console.log(`Please input your number(${times})`);
     const guessNum = scanf('%s');
     if( !guessNum.split('').every(isUnique)) {
       console.log('Cannot input duplicate numbers!');
     }else {
-      const result = compareNum.comparedResult(guessNum, defaultNum);
+      const result = compareNum.comparedResult(defaultNum, guessNum);
       if(result === '4A0B') {
         console.log('Congratulations!');
         return ;
