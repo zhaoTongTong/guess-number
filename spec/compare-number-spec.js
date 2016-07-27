@@ -1,20 +1,15 @@
 'use strict'
 
-const main = require('./main');
+const answer = require('../src/models/compareNumber');
 
 describe('return text of', () => {
 
-  xit('right answer', () => {
+  it('right answer', () => {
     const defaultAnswer = '1234';
     const inputNum = '1234';
     const expectString = '4A0B';
-    const result = main.getAnswer(defaultAnswer, inputNum);
+    const result = answer.comparedResult(defaultAnswer, inputNum);
 
     expect(result).toEqual(expectString);
-  });
-
-  it('random number', () => {
-    const result = main.getRandomNum();
-    expect(result.length).toBe(4);
   });
 });
